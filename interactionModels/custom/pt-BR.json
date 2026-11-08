@@ -41,20 +41,6 @@
           ]
         },
         {
-          "name": "LimparHistoricoIntent",
-          "slots": [],
-          "samples": [
-            "limpar histórico",
-            "limpar conversa",
-            "nova conversa",
-            "novo assunto",
-            "novo chat",
-            "esqueça tudo",
-            "reiniciar conversa",
-            "começar do zero"
-          ]
-        },
-        {
           "slots": [
             {
               "name": "query",
@@ -64,38 +50,10 @@
           "name": "ChatIntent",
           "samples": [
             "{query}",
-            "o que é {query}",
-            "o que são {query}",
-            "o que significa {query}",
-            "como é {query}",
-            "como se diz {query}",
-            "como fala {query}",
-            "como funciona {query}",
-            "como fazer {query}",
-            "como {query}",
-            "traduza {query}",
-            "por que {query}",
-            "qual {query}",
-            "qual é {query}",
-            "qual é o {query}",
-            "qual é a {query}",
-            "qual a {query}",
-            "qual o {query}",
-            "quais são {query}",
-            "quem é {query}",
-            "quem foi {query}",
-            "quem foi o {query}",
-            "quem foi a {query}",
-            "quanto é {query}",
-            "quanto custa {query}",
-            "quantos {query}",
-            "onde fica {query}",
-            "quando foi {query}",
             "me diga {query}",
-            "me fale sobre {query}",
+            "me fale {query}",
             "me explica {query}",
             "explique {query}",
-            "conte sobre {query}",
             "pergunte {query}",
             "pesquise {query}",
             "responda {query}"
@@ -108,52 +66,82 @@
           "values": [
             {
               "name": {
-                "value": "a distância da Terra até a Lua"
+                "value": "qual a distância da Terra até a Lua"
               }
             },
             {
               "name": {
-                "value": "o primeiro presidente do Brasil"
+                "value": "quem foi o primeiro presidente do Brasil"
               }
             },
             {
               "name": {
-                "value": "a capital da França"
+                "value": "como se diz onça em inglês"
               }
             },
             {
               "name": {
-                "value": "um buraco negro no espaço"
+                "value": "cachorro pode comer jabuticaba"
               }
             },
             {
               "name": {
-                "value": "a segunda guerra mundial"
+                "value": "por que o céu é azul"
               }
             },
             {
               "name": {
-                "value": "inteligência artificial e programação"
+                "value": "o que é um buraco negro"
               }
             },
             {
               "name": {
-                "value": "a receita de bolo de cenoura simples"
+                "value": "como funciona a energia solar"
               }
             },
             {
               "name": {
-                "value": "a diferença entre estrelas e planetas"
+                "value": "quais são os planetas do sistema solar"
               }
             },
             {
               "name": {
-                "value": "descobriu o Brasil em mil quinhentos"
+                "value": "onde fica a capital da Austrália"
               }
             },
             {
               "name": {
-                "value": "tempo leva a luz do sol até a terra"
+                "value": "quando foi a segunda guerra mundial"
+              }
+            },
+            {
+              "name": {
+                "value": "quanto tempo leva a luz do sol até a terra"
+              }
+            },
+            {
+              "name": {
+                "value": "como fazer bolo de cenoura simples"
+              }
+            },
+            {
+              "name": {
+                "value": "vale a pena aprender programação"
+              }
+            },
+            {
+              "name": {
+                "value": "gato pode tomar leite"
+              }
+            },
+            {
+              "name": {
+                "value": "nova conversa"
+              }
+            },
+            {
+              "name": {
+                "value": "limpar histórico"
               }
             }
           ]
