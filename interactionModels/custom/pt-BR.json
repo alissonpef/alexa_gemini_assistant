@@ -4,31 +4,15 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": [
-            "cancelar",
-            "cancela"
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": [
-            "ajuda",
-            "me ajuda",
-            "o que você faz",
-            "como funciona"
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": [
-            "parar",
-            "para",
-            "sair",
-            "fechar",
-            "tchau",
-            "encerrar",
-            "desligar"
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
@@ -42,8 +26,6 @@
           "name": "AMAZON.RepeatIntent",
           "samples": [
             "repetir",
-            "repete",
-            "repita",
             "pode repetir",
             "repete por favor",
             "o que você disse",
@@ -54,18 +36,12 @@
           "name": "AMAZON.NoIntent",
           "samples": [
             "não",
-            "nao",
             "não obrigado",
             "não obrigada",
-            "nao obrigado",
-            "nao obrigada",
             "só isso",
             "era só isso",
             "mais nada",
-            "nada",
-            "nada mais",
-            "nenhum",
-            "nenhuma"
+            "nada"
           ]
         },
         {
@@ -117,7 +93,7 @@
         }
       ],
       "types": [],
-      "invocationName": "assistente inteligente"
+      "invocationName": "modo inteligente"
     }
   }
 }
