@@ -88,6 +88,7 @@ O **Gemini Echo (Alexa Gemini Assistant)** é uma reengenharia completa da Skill
 - **Baixa Latência & Keep-Alive:** Economia de 150ms a 400ms por requisição reutilizando conexões TCP/TLS com o endpoint do Google.
 - **Roteamento Resiliente com Fallback:** Rotação automática entre `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemini-3.6-flash`, `gemini-3.8-flash`, `gemini-3.7-flash` e `gemini-3.5-flash`, com cache para modelos 404 e cooldown de sobrecarga (503/429).
 - **Memória de Conversa com Janela Deslizante:** Contexto multi-turno isolado por sessão no `session_attributes` da Alexa com poda automática (`MAX_HISTORY_TURNS = 6`) para evitar saturação de tokens.
+- **Encerramento Automático Inteligente:** Fechamento gracioso da sessão por comandos naturais de voz (*"sair"*, *"obrigado"*) ou automaticamente por inatividade da Alexa após ~15s de silêncio (reprompt timeout nativo).
 - **SSML Seguro:** Converte símbolos matemáticos e pontuações para fala natural fluida sem travar o parser da Amazon.
 
 ### Construído Com
@@ -143,7 +144,7 @@ Ao finalizar o build, vá para a aba **Code**:
    * `handlers.py` (handlers de intenções da Alexa e suporte visual a Echo Show)
    * `session_manager.py` (memória de conversa com janela deslizante de turnos)
    * `text_utils.py` (limpeza SSML e formatação de voz)
-   * `requirements.txt` (dependências: `ask-sdk-core`, `requests`)
+   * `requirements.txt` (dependências: `ask-sdk-core`, `requests`, `urllib3<2.0.0`)
 3. Clique em **Save** e então em **Deploy** (canto superior direito).
 
 #### 6. Teste da Skill (Test)
@@ -196,7 +197,7 @@ Arquitetura real mantida no projeto:
 │   ├── handlers.py          # Handlers de intenções, ciclo de vida da Alexa e SimpleCard
 │   ├── session_manager.py   # Gestão de estado na sessão e janela deslizante de histórico
 │   ├── text_utils.py        # Limpeza de Markdown, URLs e sanitização SSML para fala
-│   └── requirements.txt     # Dependências Python (ask-sdk-core, requests)
+│   └── requirements.txt     # Dependências Python (ask-sdk-core, requests, urllib3<2.0.0)
 ├── .env.example             # Template documentado de variáveis de ambiente
 ├── .gitignore               # Arquivos locais e caches protegidos
 ├── LICENSE                  # Licença de uso do software (MIT)
