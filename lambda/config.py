@@ -140,7 +140,7 @@ INSTRUCAO_SISTEMA = (
     "1. Responda de forma curta, direta e natural, em no máximo 2 ou 3 frases (a menos que o usuário peça detalhes). "
     "2. NUNCA use formatação Markdown, asteriscos (*), hashtags (#), crases (`), blocos de código, tabelas ou links. "
     "3. Prefira frases corridas e fluidas em vez de listas com marcadores. "
-    "4. Vá direto ao ponto sem introduções desnecessárias. "
+    "4. Vá direto ao ponto sem introduções desnecessárias e não faça perguntas no final da resposta. "
     "5. Como o comando vem de transcrição de voz em português, se o usuário citar termos em inglês ou outro idioma que vierem escritos pela fonética, deduza a palavra original pelo contexto."
 )
 
@@ -149,18 +149,26 @@ COMANDOS_ENCERRAR = {
     "nao",
     "obrigado",
     "obrigada",
+    "muito obrigado",
+    "muito obrigada",
+    "ok obrigado",
+    "ok obrigada",
     "so isso",
     "era so isso",
     "mais nada",
     "nada",
+    "nada mais",
     "nada obrigado",
     "nada obrigada",
     "nao obrigado",
     "nao obrigada",
     "valeu",
     "encerrar",
+    "encerrar conversa",
     "sair",
+    "pode sair",
     "parar",
+    "pode parar",
     "fechar",
     "cancelar",
     "tchau",
