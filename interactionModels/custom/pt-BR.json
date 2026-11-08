@@ -4,15 +4,31 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "cancelar",
+            "cancela"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
+          "samples": [
+            "ajuda",
+            "me ajuda",
+            "o que você faz",
+            "como funciona"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "parar",
+            "para",
+            "sair",
+            "fechar",
+            "tchau",
+            "encerrar",
+            "desligar"
+          ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
@@ -26,6 +42,8 @@
           "name": "AMAZON.RepeatIntent",
           "samples": [
             "repetir",
+            "repete",
+            "repita",
             "pode repetir",
             "repete por favor",
             "o que você disse",
@@ -39,11 +57,15 @@
             "nao",
             "não obrigado",
             "não obrigada",
+            "nao obrigado",
+            "nao obrigada",
             "só isso",
             "era só isso",
             "mais nada",
             "nada",
-            "nada não"
+            "nada mais",
+            "nenhum",
+            "nenhuma"
           ]
         },
         {
