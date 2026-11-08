@@ -19,10 +19,6 @@
           "samples": []
         },
         {
-          "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
           "name": "AMAZON.RepeatIntent",
           "samples": [
             "repetir",
@@ -62,7 +58,7 @@
           "slots": [
             {
               "name": "query",
-              "type": "AMAZON.Person"
+              "type": "QueryLivre"
             }
           ],
           "name": "ChatIntent",
@@ -74,11 +70,20 @@
             "como fazer {query}",
             "como {query}",
             "por que {query}",
+            "qual {query}",
             "qual é {query}",
+            "qual é o {query}",
+            "qual é a {query}",
             "qual a {query}",
+            "qual o {query}",
             "quais são {query}",
             "quem é {query}",
             "quem foi {query}",
+            "quem foi o {query}",
+            "quem foi a {query}",
+            "quanto é {query}",
+            "quanto custa {query}",
+            "quantos {query}",
             "onde fica {query}",
             "quando foi {query}",
             "me diga {query}",
@@ -92,7 +97,63 @@
           ]
         }
       ],
-      "types": [],
+      "types": [
+        {
+          "name": "QueryLivre",
+          "values": [
+            {
+              "name": {
+                "value": "a distância da Terra até a Lua"
+              }
+            },
+            {
+              "name": {
+                "value": "o primeiro presidente do Brasil"
+              }
+            },
+            {
+              "name": {
+                "value": "a capital da França"
+              }
+            },
+            {
+              "name": {
+                "value": "um buraco negro no espaço"
+              }
+            },
+            {
+              "name": {
+                "value": "a segunda guerra mundial"
+              }
+            },
+            {
+              "name": {
+                "value": "inteligência artificial e programação"
+              }
+            },
+            {
+              "name": {
+                "value": "a receita de bolo de cenoura simples"
+              }
+            },
+            {
+              "name": {
+                "value": "a diferença entre estrelas e planetas"
+              }
+            },
+            {
+              "name": {
+                "value": "descobriu o Brasil em mil quinhentos"
+              }
+            },
+            {
+              "name": {
+                "value": "tempo leva a luz do sol até a terra"
+              }
+            }
+          ]
+        }
+      ],
       "invocationName": "modo inteligente"
     }
   }
