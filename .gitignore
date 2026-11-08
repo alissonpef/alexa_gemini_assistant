@@ -1,0 +1,17 @@
+# Cache compilado do Python e linters
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# Ambientes virtuais Python
+.venv/
+venv/
+
+# Arquivos de ambiente e segredos locais (nunca comitar chaves reais)
+.env
+.env.*
+*.env
+!.env.example
+
+# Configurações locais de IDE
+.vscode/
