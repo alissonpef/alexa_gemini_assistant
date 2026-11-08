@@ -189,46 +189,8 @@ class ChatIntentHandler(AbstractRequestHandler):
         return builder.response
 
 
-class ClearHistoryIntentHandler(AbstractRequestHandler):
-    """Handler dedicado para a intenção LimparHistoricoIntent."""
-
-    def can_handle(self, handler_input):
-        return ask_utils.is_intent_name("LimparHistoricoIntent")(handler_input)
-
-    def handle(self, handler_input):
-        session_attr = obter_atributos_sessao(handler_input)
-        reiniciar_conversa(session_attr)
-        speak_output = "Histórico limpo! Sobre o que você quer conversar agora?"
-        session_attr["ultima_resposta"] = speak_output
-        return (
-            handler_input.response_builder.speak(speak_output)
-            .ask("Qual é a sua pergunta?")
-            .response
-        )
-
-
-class RepeatIntentHandler(AbstractRequestHandler):
-    """Handler para repetir a última resposta (AMAZON.RepeatIntent)."""
-
-    def can_handle(self, handler_input):
-        return ask_utils.is_intent_name("AMAZON.RepeatIntent")(handler_input)
-
-    def handle(self, handler_input):
-        session_attr = obter_atributos_sessao(handler_input)
-        ultima = session_attr.get("ultima_resposta")
-        if ultima:
-            speak_output = f"Repetindo: {ultima}"
-        else:
-            speak_output = "Ainda não temos uma resposta anterior para repetir. Qual é a sua pergunta?"
-        return (
-            handler_input.response_builder.speak(speak_output)
-            .ask("Alguma outra pergunta?")
-            .response
-        )
-
-
 class HelpIntentHandler(AbstractRequestHandler):
-    """Handler para pedidos de ajuda (AMAZON.HelpIntent)."""
+    """Handler para pedidos nativos de ajuda (AMAZON.HelpIntent)."""
 
     def can_handle(self, handler_input):
         return ask_utils.is_intent_name("AMAZON.HelpIntent")(handler_input)
@@ -249,13 +211,12 @@ class HelpIntentHandler(AbstractRequestHandler):
 
 
 class CancelOrStopIntentHandler(AbstractRequestHandler):
-    """Handler unificado para Cancel, Stop, NoIntent (quando usuário diz 'Não' ao reprompt) e NavigateHome."""
+    """Handler unificado para Cancel, Stop e NavigateHome."""
 
     def can_handle(self, handler_input):
         return (
             ask_utils.is_intent_name("AMAZON.CancelIntent")(handler_input)
             or ask_utils.is_intent_name("AMAZON.StopIntent")(handler_input)
-            or ask_utils.is_intent_name("AMAZON.NoIntent")(handler_input)
             or ask_utils.is_intent_name("AMAZON.NavigateHomeIntent")(handler_input)
         )
 
@@ -263,21 +224,6 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
         return (
             handler_input.response_builder.speak("Até logo!")
             .set_should_end_session(True)
-            .response
-        )
-
-
-class FallbackIntentHandler(AbstractRequestHandler):
-    """Handler para quando a Alexa não compreende a frase (AMAZON.FallbackIntent)."""
-
-    def can_handle(self, handler_input):
-        return ask_utils.is_intent_name("AMAZON.FallbackIntent")(handler_input)
-
-    def handle(self, handler_input):
-        speak_output = "Desculpe, não consegui captar o que você disse. Pode repetir a sua pergunta?"
-        return (
-            handler_input.response_builder.speak(speak_output)
-            .ask("Qual é a sua pergunta?")
             .response
         )
 

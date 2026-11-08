@@ -19,28 +19,6 @@
           "samples": []
         },
         {
-          "name": "AMAZON.RepeatIntent",
-          "samples": [
-            "repetir",
-            "pode repetir",
-            "repete por favor",
-            "o que você disse",
-            "fala de novo"
-          ]
-        },
-        {
-          "name": "AMAZON.NoIntent",
-          "samples": [
-            "não",
-            "não obrigado",
-            "não obrigada",
-            "só isso",
-            "era só isso",
-            "mais nada",
-            "nada"
-          ]
-        },
-        {
           "slots": [
             {
               "name": "query",
@@ -126,12 +104,17 @@
             },
             {
               "name": {
-                "value": "nova conversa"
+                "value": "não obrigado"
               }
             },
             {
               "name": {
-                "value": "limpar histórico"
+                "value": "repetir"
+              }
+            },
+            {
+              "name": {
+                "value": "nova conversa"
               }
             }
           ]
