@@ -32,10 +32,24 @@
       "isAvailableWorldwide": true,
       "locales": {
         "pt-BR": {
-          "name": "geminiChat"
+          "name": "geminiChat",
+          "summary": "Assistente de voz inteligente integrado ao Google Gemini.",
+          "description": "Converse naturalmente com a inteligência artificial do Google Gemini na sua Alexa com respostas rápidas, diretas e suporte a contexto de conversação.",
+          "examplePhrases": [
+            "Alexa, abrir assistente inteligente",
+            "Alexa, pergunte ao assistente inteligente por que o céu é azul",
+            "Nova conversa"
+          ],
+          "keywords": [
+            "gemini",
+            "inteligência artificial",
+            "assistente",
+            "chat",
+            "ia"
+          ]
         }
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "testingInstructions": "Configure a variável GOOGLE_API_KEY no arquivo lambda/.env e inicie a skill dizendo: Alexa, abrir assistente inteligente."
     }
   }
 }

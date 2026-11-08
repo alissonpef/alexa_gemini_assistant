@@ -19,6 +19,43 @@
           "samples": []
         },
         {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "repetir",
+            "pode repetir",
+            "repete por favor",
+            "o que você disse",
+            "fala de novo"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "não obrigado",
+            "não obrigada",
+            "só isso",
+            "mais nada"
+          ]
+        },
+        {
+          "name": "LimparHistoricoIntent",
+          "slots": [],
+          "samples": [
+            "limpar histórico",
+            "limpar conversa",
+            "nova conversa",
+            "novo assunto",
+            "novo chat",
+            "esqueça tudo",
+            "reiniciar conversa",
+            "começar do zero"
+          ]
+        },
+        {
           "slots": [
             {
               "name": "query",
@@ -27,7 +64,28 @@
           ],
           "name": "ChatIntent",
           "samples": [
-            "{query}"
+            "{query}",
+            "o que é {query}",
+            "o que são {query}",
+            "como funciona {query}",
+            "como fazer {query}",
+            "como {query}",
+            "por que {query}",
+            "qual é {query}",
+            "qual a {query}",
+            "quais são {query}",
+            "quem é {query}",
+            "quem foi {query}",
+            "onde fica {query}",
+            "quando foi {query}",
+            "me diga {query}",
+            "me fale sobre {query}",
+            "me explica {query}",
+            "explique {query}",
+            "conte sobre {query}",
+            "pergunte {query}",
+            "pesquise {query}",
+            "responda {query}"
           ]
         }
       ],
