@@ -35,10 +35,15 @@
         {
           "name": "AMAZON.NoIntent",
           "samples": [
+            "não",
+            "nao",
             "não obrigado",
             "não obrigada",
             "só isso",
-            "mais nada"
+            "era só isso",
+            "mais nada",
+            "nada",
+            "nada não"
           ]
         },
         {
