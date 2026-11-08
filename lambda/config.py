@@ -97,10 +97,6 @@ QUOTAS_MODELOS = {
         "rpm": obter_int("QUOTA_GEMINI_3_1_FLASH_LITE_RPM", 15),
         "rpd": obter_int("QUOTA_GEMINI_3_1_FLASH_LITE_RPD", 500),
     },
-    "gemini-3.6-flash": {
-        "rpm": obter_int("QUOTA_GEMINI_3_6_FLASH_RPM", 5),
-        "rpd": obter_int("QUOTA_GEMINI_3_6_FLASH_RPD", 20),
-    },
     "gemini-3.8-flash": {
         "rpm": obter_int("QUOTA_GEMINI_3_8_FLASH_RPM", 5),
         "rpd": obter_int("QUOTA_GEMINI_3_8_FLASH_RPD", 20),
@@ -108,6 +104,10 @@ QUOTAS_MODELOS = {
     "gemini-3.7-flash": {
         "rpm": obter_int("QUOTA_GEMINI_3_7_FLASH_RPM", 5),
         "rpd": obter_int("QUOTA_GEMINI_3_7_FLASH_RPD", 20),
+    },
+    "gemini-3.6-flash": {
+        "rpm": obter_int("QUOTA_GEMINI_3_6_FLASH_RPM", 5),
+        "rpd": obter_int("QUOTA_GEMINI_3_6_FLASH_RPD", 20),
     },
     "gemini-3.5-flash": {
         "rpm": obter_int("QUOTA_GEMINI_3_5_FLASH_RPM", 5),
