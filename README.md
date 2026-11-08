@@ -86,7 +86,7 @@ O **Gemini Echo (Alexa Gemini Assistant)** é uma reengenharia completa da Skill
 ### Principais Funcionalidades
 
 - **Baixa Latência & Keep-Alive:** Economia de 150ms a 400ms por requisição reutilizando conexões TCP/TLS com o endpoint do Google.
-- **Roteamento Resiliente com Fallback:** Rotação automática entre `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemini-3.6-flash`, `gemini-3.8-flash`, `gemini-3.7-flash` e `gemini-3.5-flash`, com cache para modelos 404 e cooldown de sobrecarga (503/429).
+- **Roteamento Resiliente com Fallback:** Rotação automática entre `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemini-3.1-flash`, `gemini-3.6-flash`, `gemini-3.8-flash`, `gemini-3.7-flash` e `gemini-3.5-flash`, com cache para modelos 404 e cooldown de sobrecarga (503/429).
 - **Memória de Conversa com Janela Deslizante:** Contexto multi-turno isolado por sessão no `session_attributes` da Alexa com poda automática (`MAX_HISTORY_TURNS = 6`) para evitar saturação de tokens.
 - **Encerramento Automático Inteligente:** Fechamento gracioso da sessão por comandos naturais de voz (*"sair"*, *"obrigado"*) ou automaticamente por inatividade da Alexa após ~15s de silêncio (reprompt timeout nativo).
 - **SSML Seguro:** Converte símbolos matemáticos e pontuações para fala natural fluida sem travar o parser da Amazon.
